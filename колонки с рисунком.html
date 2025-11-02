@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сетка с изображениями в центре</title>
+    <style>
+        /* Базовые стили */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .col {
+            width: 300px;
+            height: 300px;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        /* Стили для изображения */
+        .image-container {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            .col {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .image-container {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .row {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .col {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col">
+            <div class="image-container">
+                <!-- Замените src на путь к вашему изображению -->
+                <img src="https://avatars.mds.yandex.net/i?id=68706752333f9f5c199a4767632dc8c8_l-5235483-images-thumbs&n=13" alt="Пример изображения">
+            </div>
+            <div>Здесь Серую дорожку из асфальта
+Осень расписала жёлто, ярко.
+Я иду по ней и представляю,
+Что из лета в зиму по мосту шагаю!</div>
+        </div>
+        <div class="col">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/e9/47/88/e94788da054ea92baf5641cd3afe7f15.jpg" alt="Пример изображения">
+            </div>
+            <div>Здесь Если на деревьях листья пожелтели,
+Если в край далёкий птицы улетели,
+Если небо хмурое, если дождик льётся,
+Это время года осенью зовется</div>
+        </div>
+        <div class="col">
+            <div class="image-container">
+                <img src="https://avatars.mds.yandex.net/get-shedevrum/14906380/img_1ba7091e1e2611f0970db6d248c3352f/orig" alt="Пример изображения">
+            </div>
+            <div>Здесь В листопаде, яркое,
+Что за чудо, спросим?
+На дары богатое
+Время года осень.</div>
+        </div>
+        <div class="col">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/originals/c2/e1/48/c2e1489ec7227be01edfbcb3491d7bed.jpg" alt="Пример изображения">
+            </div>
+            <div>Дождик льёт, старается,
+Хоть его не просят.
+Солнце в тучах мается,
+Значит это осень.</div>
+        </div>
+        <div class="col">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/67/16/47/671647d01f439cbf4ab3d3dc45b9de97.jpg" alt="Пример изображения">
+            </div>
+            <div>Осень, осень, погоди!
+И с дождями не спеши,
+Дай ещё нам лета,
+Солнышка и света.</div>
+        </div>
+        <div class="col">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/7e/3a/30/7e3a302bcaf7c413e24718465a698c23.jpg" alt="Пример изображения">
+            </div>
+            <div>Осень достала краски,
+Ей много покрасить нужно:
+Листья – желтым и красным,
+Серым – небо и лужи</div>
+        </div>
+    </div>
+</body>
+</html>
