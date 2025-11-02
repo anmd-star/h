@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вывод JSON данных</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .user-card {
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .user-card p {
+            margin: 5px 0;
+        }
+        .property {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .console-info {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="userName">Загрузка...</h1>
+        
+        <div class="user-card">
+            <p><span class="property">ID:</span> <span id="userId"></span></p>
+            <p><span class="property">Имя:</span> <span id="userNameFull"></span></p>
+            <p><span class="property">Имя пользователя:</span> <span id="userUsername"></span></p>
+            <p><span class="property">Email:</span> <span id="userEmail"></span></p>
+        </div>
+        
+        
+
+    <script>
+        // Создаем объект с данными пользователя
+        let obj = {
+            id: 1,
+            name: "Nataliy",
+            username: "Nata",
+            email: "anm-d@mail.ru",
+        };
+        
+        // Выводим имя пользователя в заголовок
+        let element1 = document.querySelector('h1');
+        element1.innerHTML = obj.name;
+        
+        // Заполняем остальные данные
+        document.getElementById('userId').textContent = obj.id;
+        document.getElementById('userNameFull').textContent = obj.name;
+        document.getElementById('userUsername').textContent = obj.username;
+        document.getElementById('userEmail').textContent = obj.email;
+        
+        // Выводим в консоль
+        console.log("Имя пользователя:", obj.name);
+        console.log("Полные данные пользователя:", obj);
+        
+        // Дополнительная информация в консоли
+        console.log("--- Дополнительная информация ---");
+        for (let key in obj) {
+            console.log(`${key}: ${obj[key]}`);
+        }
+    </script>
+</body>
+</html>
